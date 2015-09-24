@@ -5,6 +5,4 @@ package com.jaiwo99.playground.randomwar.system;
  * @since 24.09.15
  */
 public interface Recordable {
-
-    Record toRecord();
 }

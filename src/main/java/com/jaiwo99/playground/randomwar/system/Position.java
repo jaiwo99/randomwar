@@ -5,27 +5,16 @@ package com.jaiwo99.playground.randomwar.system;
  * @since 24.09.15
  */
 public class Position {
-    private final int x;
-    private final int y;
+    public final int x;
+    public final int y;
 
     public Position(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
     @Override
     public String toString() {
-        return "Position{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return String.format("(%s, %s)", x, y);
     }
 }

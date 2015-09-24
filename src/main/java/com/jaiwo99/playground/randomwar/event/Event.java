@@ -1,4 +1,4 @@
-package com.jaiwo99.playground.randomwar.system;
+package com.jaiwo99.playground.randomwar.event;
 
 /**
  * @author liang shi
