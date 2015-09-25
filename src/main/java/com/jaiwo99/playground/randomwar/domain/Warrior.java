@@ -3,12 +3,13 @@ package com.jaiwo99.playground.randomwar.domain;
 import com.jaiwo99.playground.randomwar.constant.WarriorConstant;
 import com.jaiwo99.playground.randomwar.system.Consumable;
 import com.jaiwo99.playground.randomwar.system.Position;
+import com.jaiwo99.playground.randomwar.system.Recordable;
 
 /**
  * @author liang shi
  * @since 24.09.15
  */
-public class Warrior {
+public class Warrior implements Recordable {
 
     public final String id;
     public final String name;
@@ -26,5 +27,10 @@ public class Warrior {
 
     public void consume(Consumable event) {
         event.consume();
+    }
+
+    @Override
+    public String toRecordString() {
+        return String.format("%s;%s", id, name);
     }
 }

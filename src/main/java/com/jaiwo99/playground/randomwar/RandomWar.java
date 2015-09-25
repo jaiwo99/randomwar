@@ -6,6 +6,7 @@ import com.jaiwo99.playground.randomwar.menu.WelcomeBanner;
 import com.jaiwo99.playground.randomwar.repository.EventStore;
 import com.jaiwo99.playground.randomwar.repository.WarriorStore;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,8 +32,8 @@ public class RandomWar {
         eventStore = EventStore.getInstance();
     }
 
-    public void init() {
-
+    public void init(String storePath) throws IOException {
+        warriorStore.storePath = storePath;
         // load all saved warrior
         warriors = warriorStore.load();
 
