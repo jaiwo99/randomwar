@@ -39,11 +39,9 @@ public class WarriorFightMenu implements Menu {
 
             if (fightResult == FightResult.LOSE) {
                 type = MenuActionType.LOSE_A_FIGHT;
-                System.out.println("Warrior lost the fight");
                 break;
             } else if (fightResult == FightResult.WIN) {
                 type = MenuActionType.WIN_A_FIGHT;
-                System.out.println("Warrior won the fight");
                 break;
             } else {
                 System.out.println("Played a tie, rematch");

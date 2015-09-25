@@ -2,6 +2,7 @@ package com.jaiwo99.playground.randomwar.system;
 
 import com.jaiwo99.playground.randomwar.event.EventType;
 
+import static com.jaiwo99.playground.randomwar.event.EventType.*;
 import static java.util.concurrent.ThreadLocalRandom.current;
 
 /**
@@ -14,7 +15,7 @@ public class GameEventTypeGenerator {
     }
 
     public static EventType generateEventFollowsExplore() {
-        EventType[] eventTypes = EventType.exploreFollowingEvents();
+        EventType[] eventTypes = new EventType[] {FIGHT, FIGHT, FIGHT, FIGHT, FIGHT, HEAL, NONE};
         return eventTypes[current().nextInt(eventTypes.length)];
     }
 }

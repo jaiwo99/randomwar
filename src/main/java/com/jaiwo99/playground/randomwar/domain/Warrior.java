@@ -25,6 +25,6 @@ public class Warrior {
     }
 
     public void consume(Consumable event) {
-        event.consume(this);
+        event.consume();
     }
 }

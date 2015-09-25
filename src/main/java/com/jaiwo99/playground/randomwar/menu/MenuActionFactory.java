@@ -34,6 +34,8 @@ public class MenuActionFactory {
                 return new LoseFightMenuAction(eventStore);
             case HEALED:
                 return new WarriorHealedAction(eventStore);
+            case GAME_OVER:
+                return new WarriorGameOverAction(eventStore);
             case SAVE:
             case START_GAME:
             case BACK_TO_MAIN_MENU:

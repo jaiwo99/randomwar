@@ -13,6 +13,7 @@ public class LoseFightMenu implements Menu {
            MenuEndpointFactory.getInstance().getMenuEndpointByType(MenuActionType.CONTINUE_GAME).show();
        } else {
            System.out.println("Game over!");
+           MenuActionFactory.getInstance().getMenuActionByType(MenuActionType.GAME_OVER).execute();
            MenuEndpointFactory.getInstance().getMenuEndpointByType(MenuActionType.GAME_OVER).show();
        }
     }

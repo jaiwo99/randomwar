@@ -1,14 +1,20 @@
 package com.jaiwo99.playground.randomwar.event;
 
-import com.jaiwo99.playground.randomwar.domain.Warrior;
+import com.jaiwo99.playground.randomwar.RandomWar;
+import com.jaiwo99.playground.randomwar.constant.WarriorConstant;
+import com.jaiwo99.playground.randomwar.system.Position;
 
 /**
  * @author jaiwo99
  */
 public class GameOverEvent implements Event {
+
     @Override
-    public void consume(Warrior warrior) {
-        System.out.println(String.format("Game over! Warrior %s got %s scores in this game!", warrior.name, warrior.score));
+    public void consume() {
+        System.out.println(String.format("Warrior %s got %s scores in this game!", RandomWar.getInstance().currentWarrior.name, RandomWar.getInstance().currentWarrior.score));
+        RandomWar.getInstance().currentWarrior.score = WarriorConstant.WARRIOR_INIT_SCORE;
+        RandomWar.getInstance().currentWarrior.health = WarriorConstant.WARRIOR_INIT_HEALTH;
+        RandomWar.getInstance().currentWarrior.position = new Position(WarriorConstant.WARRIOR_INIT_X, WarriorConstant.WARRIOR_INIT_Y);
     }
 
     @Override
