@@ -14,7 +14,6 @@ public class ChooseWarriorMenu implements Menu {
     private final List<Warrior> warriors;
 
     public ChooseWarriorMenu(List<Warrior> warriors) {
-        System.out.println(String.format("There are %s warriors in DB", warriors.size()));
         this.warriors = warriors;
     }
 
@@ -22,7 +21,7 @@ public class ChooseWarriorMenu implements Menu {
     public void show() {
         final Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please choose one warrior to start game:");
+        System.out.println("\nPlease choose one warrior to start game:");
         for (int i = 0; i <warriors.size(); i++) {
             System.out.println(String.format("(%s) %s", i+1, warriors.get(i).name));
         }

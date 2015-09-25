@@ -7,8 +7,8 @@ public class WelcomeBanner implements Menu {
 
     @Override
     public void show() {
-        System.out.println("#########################################");
+        System.out.println("\n#########################################");
         System.out.println("# Welcome to RandomWar");
-        System.out.println("#########################################");
+        System.out.println("#########################################\n");
     }
 }

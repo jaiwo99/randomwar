@@ -2,6 +2,7 @@ package com.jaiwo99.playground.randomwar;
 
 import com.jaiwo99.playground.randomwar.domain.Warrior;
 import com.jaiwo99.playground.randomwar.menu.MainMenu;
+import com.jaiwo99.playground.randomwar.menu.WelcomeBanner;
 import com.jaiwo99.playground.randomwar.repository.EventStore;
 import com.jaiwo99.playground.randomwar.repository.WarriorStore;
 
@@ -34,6 +35,8 @@ public class RandomWar {
 
         // load all saved warrior
         warriors = warriorStore.load();
+
+        new WelcomeBanner().show();
 
         // show menu
         new MainMenu().show();

@@ -12,12 +12,12 @@ public class MainMenu implements Menu {
 
         final Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please choose one option:");
-        System.out.println("(1) create a new warrior");
-        System.out.println("(2) start game with an existing warrior");
 
         final MenuActionType type;
         while (true) {
+            System.out.println("\nPlease choose one option:");
+            System.out.println("(1) create a new warrior");
+            System.out.println("(2) start game with an existing warrior");
             String input = scanner.nextLine();
             if ("1".equals(input)) {
                 type = MenuActionType.CREATE_NEW_WARRIOR;

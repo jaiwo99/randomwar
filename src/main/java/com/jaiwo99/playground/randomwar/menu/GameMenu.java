@@ -11,12 +11,12 @@ public class GameMenu implements Menu {
     public void show() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please choose an action:");
-        System.out.println("(1) explore");
-        System.out.println("(s) save game and exit");
 
         MenuActionType type;
         while (true) {
+            System.out.println("\nPlease choose an action:");
+            System.out.println("(1) explore");
+            System.out.println("(s) save game and exit");
             String input = scanner.nextLine();
             if ("1".equals(input)) {
                 type = MenuActionType.EXPLORE;

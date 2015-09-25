@@ -18,10 +18,10 @@ public class WarriorFightMenu implements Menu {
         MenuActionType type;
         while (true) {
             GameOutcome gameOutcome;
-            System.out.println("Choose one:");
+            System.out.println("\nRock Paper Scissors?");
             System.out.println("(1) Rock");
             System.out.println("(2) Paper");
-            System.out.println("(3) Scissor");
+            System.out.println("(3) Scissors");
 
             String input = scanner.nextLine();
 
@@ -54,7 +54,7 @@ public class WarriorFightMenu implements Menu {
         } else if ("2".equals(input)) {
             userChoice = "Paper";
         } else {
-            userChoice = "Scissor";
+            userChoice = "Scissors";
         }
 
         final String computerChoice = randomComputerMove();
@@ -65,17 +65,17 @@ public class WarriorFightMenu implements Menu {
 
             return GameOutcome.TIE;
 
-        } else if(userChoice.equalsIgnoreCase("ROCK")){
+        } else if(userChoice.equalsIgnoreCase("Rock")){
 
-            if(computerChoice.equalsIgnoreCase("PAPER")){
+            if(computerChoice.equalsIgnoreCase("Paper")){
                 return GameOutcome.LOSE;
             } else {
                 return GameOutcome.WIN;
             }
 
-        } else if(userChoice.equalsIgnoreCase("PAPER")){
+        } else if(userChoice.equalsIgnoreCase("Paper")){
 
-            if(computerChoice.equalsIgnoreCase("SCISSORS")){
+            if(computerChoice.equalsIgnoreCase("Scissors")){
                 return GameOutcome.LOSE;
             } else {
                 return GameOutcome.WIN;
@@ -83,7 +83,7 @@ public class WarriorFightMenu implements Menu {
 
         } else {
 
-            if(computerChoice.equalsIgnoreCase("ROCK")){
+            if(computerChoice.equalsIgnoreCase("Rock")){
                 return GameOutcome.LOSE;
             } else {
                 return GameOutcome.WIN;
@@ -92,7 +92,7 @@ public class WarriorFightMenu implements Menu {
     }
 
     private String randomComputerMove() {
-        String[] moves = new String[] {"Rock", "Paper", "Scissor"};
+        String[] moves = new String[] {"Rock", "Paper", "Scissors"};
         return moves[current().nextInt(moves.length)];
     }
 
