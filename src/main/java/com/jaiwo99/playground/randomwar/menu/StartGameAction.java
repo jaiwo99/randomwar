@@ -1,5 +1,6 @@
 package com.jaiwo99.playground.randomwar.menu;
 
+import com.jaiwo99.playground.randomwar.RandomWar;
 import com.jaiwo99.playground.randomwar.repository.EventStore;
 
 /**
@@ -15,6 +16,8 @@ public class StartGameAction implements MenuAction {
 
     @Override
     public void execute() {
-        // TODO load existing event
+        eventStore.loadEvents().stream().forEachOrdered(event ->
+            RandomWar.getInstance().currentWarrior.consume(event)
+        );
     }
 }

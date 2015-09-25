@@ -1,12 +1,11 @@
 package com.jaiwo99.playground.randomwar.event;
 
 import com.jaiwo99.playground.randomwar.domain.Warrior;
-import com.jaiwo99.playground.randomwar.system.Consumable;
 
 /**
  * @author jaiwo99
  */
-public class LoseFightEvent implements Event, Consumable {
+public class LoseFightEvent implements Event {
 
     @Override
     public void consume(Warrior warrior) {

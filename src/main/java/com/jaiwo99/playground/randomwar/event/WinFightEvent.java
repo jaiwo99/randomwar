@@ -1,12 +1,11 @@
 package com.jaiwo99.playground.randomwar.event;
 
 import com.jaiwo99.playground.randomwar.domain.Warrior;
-import com.jaiwo99.playground.randomwar.system.Consumable;
 
 /**
  * @author jaiwo99
  */
-public class WinFightEvent implements Event, Consumable {
+public class WinFightEvent implements Event {
 
 
     @Override
