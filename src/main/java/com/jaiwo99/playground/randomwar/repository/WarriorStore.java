@@ -10,6 +10,15 @@ import java.util.List;
  */
 public class WarriorStore {
 
+    private static final WarriorStore warriorStore = new WarriorStore();
+
+    private WarriorStore() {
+    }
+
+    public static WarriorStore getInstance() {
+        return warriorStore;
+    }
+
     public List<Warrior> load() {
         return RandomWar.getInstance().warriors;
     }

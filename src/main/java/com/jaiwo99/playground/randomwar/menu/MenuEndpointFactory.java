@@ -16,8 +16,8 @@ public class MenuEndpointFactory {
     private final EventStore eventStore;
 
     private MenuEndpointFactory() {
-        warriorStore = new WarriorStore();
-        eventStore = new EventStore();
+        warriorStore = WarriorStore.getInstance();
+        eventStore = EventStore.getInstance();
     }
 
     public static final MenuEndpointFactory getInstance() {
@@ -38,6 +38,8 @@ public class MenuEndpointFactory {
                 return new ChooseWarriorMenu(warriorStore.load());
             case EXPLORE:
                 return rollFollowedMenuForExplore();
+            case QUIT_GAME:
+                return new QuitGameMenu();
             case CREATE_NEW_WARRIOR:
             case SAVE:
             case BACK_TO_MAIN_MENU:

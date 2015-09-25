@@ -14,8 +14,8 @@ public class MenuActionFactory {
     private final EventStore eventStore;
 
     private MenuActionFactory() {
-        warriorStore = new WarriorStore();
-        eventStore = new EventStore();
+        warriorStore = WarriorStore.getInstance();
+        eventStore = EventStore.getInstance();
     }
 
     public static final MenuActionFactory getInstance() {
@@ -37,6 +37,7 @@ public class MenuActionFactory {
             case SAVE:
             case START_GAME:
             case BACK_TO_MAIN_MENU:
+            case QUIT_GAME:
             case NONE:
             default:
                 return new NoneMenuAction();

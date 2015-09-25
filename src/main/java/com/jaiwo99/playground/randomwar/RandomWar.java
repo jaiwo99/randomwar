@@ -27,8 +27,8 @@ public class RandomWar {
     }
 
     private RandomWar() {
-        warriorStore = new WarriorStore();
-        eventStore = new EventStore();
+        warriorStore = WarriorStore.getInstance();
+        eventStore = EventStore.getInstance();
     }
 
     public void init() {
