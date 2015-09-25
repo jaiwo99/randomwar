@@ -17,4 +17,9 @@ public class LoseFightEvent implements Event {
     public EventType getEventType() {
         return EventType.LOSE_FIGHT;
     }
+
+    @Override
+    public String toDataString() {
+        return getEventType().name();
+    }
 }

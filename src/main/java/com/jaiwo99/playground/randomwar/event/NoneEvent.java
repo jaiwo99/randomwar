@@ -13,4 +13,9 @@ public class NoneEvent implements Event {
     public EventType getEventType() {
         return EventType.NONE;
     }
+
+    @Override
+    public String toDataString() {
+        return getEventType().name();
+    }
 }

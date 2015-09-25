@@ -44,7 +44,7 @@ public class WarriorStore {
 
     public String saveWarrior(Warrior warrior) {
         try {
-            Files.write(Paths.get(storePath, DataStoreConstant.WARRIOR_STORE_PATH), Arrays.asList(warrior.toRecordString()), StandardOpenOption.APPEND);
+            Files.write(Paths.get(storePath, DataStoreConstant.WARRIOR_STORE_PATH), Arrays.asList(warrior.toDataString()), StandardOpenOption.APPEND);
         } catch (IOException e) {
             System.out.println("Failed to save warrior, reason " + e);
         }

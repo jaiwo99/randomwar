@@ -18,4 +18,9 @@ public class WinFightEvent implements Event {
     public EventType getEventType() {
         return EventType.WIN_FIGHT;
     }
+
+    @Override
+    public String toDataString() {
+        return getEventType().name();
+    }
 }

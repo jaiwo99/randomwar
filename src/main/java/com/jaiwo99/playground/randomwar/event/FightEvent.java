@@ -16,4 +16,8 @@ public class FightEvent implements Event {
     }
 
 
+    @Override
+    public String toDataString() {
+        return getEventType().name();
+    }
 }

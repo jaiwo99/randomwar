@@ -21,4 +21,9 @@ public class GameOverEvent implements Event {
     public EventType getEventType() {
         return EventType.GAME_OVER;
     }
+
+    @Override
+    public String toDataString() {
+        return getEventType().name();
+    }
 }

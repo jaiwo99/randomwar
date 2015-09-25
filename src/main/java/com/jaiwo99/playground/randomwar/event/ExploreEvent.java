@@ -25,4 +25,9 @@ public class ExploreEvent implements Event {
         RandomWar.getInstance().currentWarrior.position = position;
         System.out.println("Warrior moved to " + position);
     }
+
+    @Override
+    public String toDataString() {
+        return String.format("%s;%s;%s", getEventType(), position.x, position.y);
+    }
 }

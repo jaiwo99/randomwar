@@ -34,6 +34,7 @@ public class RandomWar {
 
     public void init(String storePath) throws IOException {
         warriorStore.storePath = storePath;
+        eventStore.storePath = storePath;
         // load all saved warrior
         warriors = warriorStore.load();
 

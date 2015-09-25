@@ -16,4 +16,9 @@ public class HealEvent implements Event {
     public EventType getEventType() {
         return EventType.HEAL;
     }
+
+    @Override
+    public String toDataString() {
+        return getEventType().name();
+    }
 }

@@ -3,13 +3,13 @@ package com.jaiwo99.playground.randomwar.domain;
 import com.jaiwo99.playground.randomwar.constant.WarriorConstant;
 import com.jaiwo99.playground.randomwar.system.Consumable;
 import com.jaiwo99.playground.randomwar.system.Position;
-import com.jaiwo99.playground.randomwar.system.Recordable;
+import com.jaiwo99.playground.randomwar.system.Storeable;
 
 /**
  * @author liang shi
  * @since 24.09.15
  */
-public class Warrior implements Recordable {
+public class Warrior implements Storeable {
 
     public final String id;
     public final String name;
@@ -30,7 +30,7 @@ public class Warrior implements Recordable {
     }
 
     @Override
-    public String toRecordString() {
+    public String toDataString() {
         return String.format("%s;%s", id, name);
     }
 }
