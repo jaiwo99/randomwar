@@ -29,10 +29,10 @@ public class Game {
         }
     }
 
-    private static void buildDataStore(String rootPath) throws IOException {
+    static void buildDataStore(String rootPath) throws IOException {
         File root = new File(rootPath);
         if (root.exists() && root.isDirectory()) {
-        } else if (root.exists() && !root.isDirectory()){
+        } else if (root.exists() && !root.isDirectory()) {
             root.delete();
             root.mkdir();
         } else {

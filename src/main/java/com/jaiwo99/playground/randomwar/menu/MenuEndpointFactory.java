@@ -1,9 +1,10 @@
 package com.jaiwo99.playground.randomwar.menu;
 
 import com.jaiwo99.playground.randomwar.event.EventType;
-import com.jaiwo99.playground.randomwar.repository.EventStore;
 import com.jaiwo99.playground.randomwar.repository.WarriorStore;
-import com.jaiwo99.playground.randomwar.system.GameEventTypeGenerator;
+
+import static com.jaiwo99.playground.randomwar.event.EventType.*;
+import static java.util.concurrent.ThreadLocalRandom.current;
 
 /**
  * @author jaiwo99
@@ -13,11 +14,9 @@ public class MenuEndpointFactory {
     private static final MenuEndpointFactory factory = new MenuEndpointFactory();
 
     private final WarriorStore warriorStore;
-    private final EventStore eventStore;
 
     private MenuEndpointFactory() {
         warriorStore = WarriorStore.getInstance();
-        eventStore = EventStore.getInstance();
     }
 
     public static final MenuEndpointFactory getInstance() {
@@ -54,7 +53,7 @@ public class MenuEndpointFactory {
      */
     private Menu rollFollowedMenuForExplore() {
 
-        final EventType eventType = GameEventTypeGenerator.generateEventFollowsExplore();
+        final EventType eventType = generateEventFollowsExplore();
         if (EventType.FIGHT.equals(eventType)) {
             return new WarriorFightMenu();
         } else if (EventType.HEAL.equals(eventType)) {
@@ -64,5 +63,10 @@ public class MenuEndpointFactory {
         } else {
             throw new UnsupportedOperationException(String.format("Event type %s is not supported yet!", eventType));
         }
+    }
+
+    private EventType generateEventFollowsExplore() {
+        EventType[] eventTypes = new EventType[] {FIGHT, FIGHT, FIGHT, FIGHT, FIGHT, HEAL, NONE};
+        return eventTypes[current().nextInt(eventTypes.length)];
     }
 }

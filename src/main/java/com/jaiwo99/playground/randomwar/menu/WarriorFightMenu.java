@@ -26,12 +26,14 @@ public class WarriorFightMenu implements Menu {
 
             String input = scanner.nextLine();
 
+            final String computerChoice = RockPaperScissorsJudge.randomComputerMove();
+
             if ("1".equals(input)) {
-                fightResult = RockPaperScissorsJudge.rockPaperScissors("Rock");
+                fightResult = RockPaperScissorsJudge.rockPaperScissors("Rock", computerChoice);
             } else if ("2".equals(input)) {
-                fightResult = RockPaperScissorsJudge.rockPaperScissors("Paper");
+                fightResult = RockPaperScissorsJudge.rockPaperScissors("Paper", computerChoice);
             } else if ("3".equals(input)) {
-                fightResult = RockPaperScissorsJudge.rockPaperScissors("Scissors");
+                fightResult = RockPaperScissorsJudge.rockPaperScissors("Scissors", computerChoice);
             } else {
                 System.out.println("Invalid input, please retry");
                 continue;

@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.jaiwo99.playground.randomwar.constant.DataStoreConstant.DATA_SEPARATOR_SYMBOL;
+
 /**
  * @author jaiwo99
  */
@@ -33,7 +35,7 @@ public class WarriorStore {
         Path warriorFile = Paths.get(storePath, DataStoreConstant.WARRIOR_STORE_PATH);
         try {
             Files.lines(warriorFile).forEach(s -> {
-                final String[] data = s.split(";");
+                final String[] data = s.split(DATA_SEPARATOR_SYMBOL);
                 warriors.add(new Warrior(data[0], data[1]));
             });
         } catch (IOException e) {

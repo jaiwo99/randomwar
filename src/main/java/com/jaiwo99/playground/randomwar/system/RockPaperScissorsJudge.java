@@ -11,8 +11,7 @@ public class RockPaperScissorsJudge {
     private RockPaperScissorsJudge() {
     }
 
-    public static FightResult rockPaperScissors(String input) {
-        final String computerChoice = randomComputerMove();
+    public static FightResult rockPaperScissors(String input, String computerChoice) {
 
         System.out.println(String.format("Warrior chose %s, computer chose %s", input, computerChoice));
 
@@ -20,17 +19,17 @@ public class RockPaperScissorsJudge {
 
             return FightResult.TIE;
 
-        } else if(input.equalsIgnoreCase("Rock")){
+        } else if (input.equalsIgnoreCase("Rock")) {
 
-            if(computerChoice.equalsIgnoreCase("Paper")){
+            if (computerChoice.equalsIgnoreCase("Paper")) {
                 return FightResult.LOSE;
             } else {
                 return FightResult.WIN;
             }
 
-        } else if(input.equalsIgnoreCase("Paper")){
+        } else if (input.equalsIgnoreCase("Paper")) {
 
-            if(computerChoice.equalsIgnoreCase("Scissors")){
+            if (computerChoice.equalsIgnoreCase("Scissors")) {
                 return FightResult.LOSE;
             } else {
                 return FightResult.WIN;
@@ -38,7 +37,7 @@ public class RockPaperScissorsJudge {
 
         } else {
 
-            if(computerChoice.equalsIgnoreCase("Rock")){
+            if (computerChoice.equalsIgnoreCase("Rock")) {
                 return FightResult.LOSE;
             } else {
                 return FightResult.WIN;
@@ -46,8 +45,8 @@ public class RockPaperScissorsJudge {
         }
     }
 
-    private static String randomComputerMove() {
-        String[] moves = new String[] {"Rock", "Paper", "Scissors"};
+    public static String randomComputerMove() {
+        String[] moves = new String[]{"Rock", "Paper", "Scissors"};
         return moves[current().nextInt(moves.length)];
     }
 }

@@ -3,13 +3,15 @@ package com.jaiwo99.playground.randomwar.event;
 import com.jaiwo99.playground.randomwar.RandomWar;
 import com.jaiwo99.playground.randomwar.system.Position;
 
+import static com.jaiwo99.playground.randomwar.constant.DataStoreConstant.DATA_SEPARATOR_SYMBOL;
+
 /**
  * @author liang shi
  * @since 24.09.15
  */
 public class ExploreEvent implements Event {
 
-    private final Position position;
+    public final Position position;
 
     public ExploreEvent(Position position) {
         this.position = position;
@@ -28,11 +30,11 @@ public class ExploreEvent implements Event {
 
     @Override
     public String toDataString() {
-        return String.format("%s;%s;%s", getEventType(), position.x, position.y);
+        return String.format("%s%s%s%s%s", getEventType(), DATA_SEPARATOR_SYMBOL, position.x, DATA_SEPARATOR_SYMBOL, position.y);
     }
 
     public static ExploreEvent fromString(String data) {
-        final String[] dataArray = data.split(";");
+        final String[] dataArray = data.split(DATA_SEPARATOR_SYMBOL);
         return new ExploreEvent(new Position(Integer.valueOf(dataArray[1]), Integer.valueOf(dataArray[2])));
     }
 }

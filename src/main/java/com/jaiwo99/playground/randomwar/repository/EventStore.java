@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.jaiwo99.playground.randomwar.constant.DataStoreConstant.DATA_SEPARATOR_SYMBOL;
 import static com.jaiwo99.playground.randomwar.event.EventType.valueOf;
 
 /**
@@ -42,9 +43,7 @@ public class EventStore {
         final List<Event> events = new ArrayList<>();
         Path eventFile = Paths.get(storePath, RandomWar.getInstance().currentWarrior.id);
         try {
-            Files.lines(eventFile).forEachOrdered(s -> {
-                events.add(buildEvent(s));
-            });
+            Files.lines(eventFile).forEachOrdered(s -> events.add(buildEvent(s)));
         } catch (IOException e) {
             System.out.println("Failed to load warriors, reason " + e.getMessage());
         }
@@ -52,7 +51,7 @@ public class EventStore {
     }
 
     private Event buildEvent(String s) {
-        switch (valueOf(s.split(";")[0])) {
+        switch (valueOf(s.split(DATA_SEPARATOR_SYMBOL)[0])) {
             case EXPLORE:
                 return ExploreEvent.fromString(s);
             case FIGHT:

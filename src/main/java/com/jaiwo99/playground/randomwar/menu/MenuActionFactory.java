@@ -36,8 +36,9 @@ public class MenuActionFactory {
                 return new WarriorHealedAction(eventStore);
             case GAME_OVER:
                 return new WarriorGameOverAction(eventStore);
-            case SAVE:
             case START_GAME:
+                return new StartGameAction(eventStore);
+            case SAVE:
             case BACK_TO_MAIN_MENU:
             case QUIT_GAME:
             case NONE:

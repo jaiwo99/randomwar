@@ -10,4 +10,6 @@ public class DataStoreConstant implements Constant {
     public static final String UNIX_STORE_PATH = "/tmp/randomwar";
 
     public static final String WARRIOR_STORE_PATH = "/warriors.txt";
+
+    public static final String DATA_SEPARATOR_SYMBOL = ";";
 }
