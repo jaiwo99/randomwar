@@ -1,5 +1,7 @@
 package com.jaiwo99.playground.randomwar.menu;
 
+import com.jaiwo99.playground.randomwar.RandomWar;
+import com.jaiwo99.playground.randomwar.event.HealEvent;
 import com.jaiwo99.playground.randomwar.repository.EventStore;
 
 /**
@@ -15,6 +17,8 @@ public class WarriorHealedAction implements MenuAction {
 
     @Override
     public void execute() {
-
+        final HealEvent healEvent = new HealEvent();
+        RandomWar.getInstance().currentWarrior.consume(healEvent);
+        eventStore.saveEvent(healEvent);
     }
 }

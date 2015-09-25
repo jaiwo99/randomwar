@@ -1,5 +1,7 @@
 package com.jaiwo99.playground.randomwar.menu;
 
+import com.jaiwo99.playground.randomwar.RandomWar;
+import com.jaiwo99.playground.randomwar.event.LoseFightEvent;
 import com.jaiwo99.playground.randomwar.repository.EventStore;
 
 /**
@@ -15,6 +17,8 @@ public class LoseFightMenuAction implements MenuAction {
 
     @Override
     public void execute() {
-
+        final LoseFightEvent loseFightEvent = new LoseFightEvent();
+        RandomWar.getInstance().currentWarrior.consume(loseFightEvent);
+        eventStore.saveEvent(loseFightEvent);
     }
 }

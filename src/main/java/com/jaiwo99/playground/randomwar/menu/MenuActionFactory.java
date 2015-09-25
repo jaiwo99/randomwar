@@ -28,14 +28,13 @@ public class MenuActionFactory {
                 return new CreateWarriorMenuAction(warriorStore);
             case EXPLORE:
                 return new WarriorExploreMenuAction(eventStore);
-            case SAVE:
-                return new SaveGameMenuAction(eventStore);
             case WIN_A_FIGHT:
                 return new WinFightMenuAction(eventStore);
             case LOSE_A_FIGHT:
                 return new LoseFightMenuAction(eventStore);
             case HEALED:
                 return new WarriorHealedAction(eventStore);
+            case SAVE:
             case START_GAME:
             case BACK_TO_MAIN_MENU:
             case NONE:

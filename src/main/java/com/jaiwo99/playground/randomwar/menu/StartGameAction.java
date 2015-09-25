@@ -1,20 +1,20 @@
 package com.jaiwo99.playground.randomwar.menu;
 
-import com.jaiwo99.playground.randomwar.domain.Warrior;
+import com.jaiwo99.playground.randomwar.repository.EventStore;
 
 /**
  * @author jaiwo99
  */
 public class StartGameAction implements MenuAction {
 
-    private final Warrior warrior;
+    private final EventStore eventStore;
 
-    public StartGameAction(Warrior warrior) {
-        this.warrior = warrior;
+    public StartGameAction(EventStore eventStore) {
+        this.eventStore = eventStore;
     }
 
     @Override
     public void execute() {
-
+        // TODO load existing event
     }
 }

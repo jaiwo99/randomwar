@@ -6,5 +6,6 @@ package com.jaiwo99.playground.randomwar.menu;
 public class NoneMenuAction implements MenuAction {
     @Override
     public void execute() {
+        System.out.println("Nothing happened!");
     }
 }

@@ -96,7 +96,7 @@ public class WarriorFightMenu implements Menu {
         return moves[current().nextInt(moves.length)];
     }
 
-    private static enum GameOutcome {
+    private enum GameOutcome {
         WIN, LOSE, TIE
     }
 }
