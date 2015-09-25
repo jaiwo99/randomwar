@@ -26,4 +26,8 @@ public class GameOverEvent implements Event {
     public String toDataString() {
         return getEventType().name();
     }
+
+    public static GameOverEvent fromString(String data) {
+        return new GameOverEvent();
+    }
 }

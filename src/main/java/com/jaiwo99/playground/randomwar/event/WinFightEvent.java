@@ -23,4 +23,8 @@ public class WinFightEvent implements Event {
     public String toDataString() {
         return getEventType().name();
     }
+
+    public static WinFightEvent fromString(String data) {
+        return new WinFightEvent();
+    }
 }

@@ -20,4 +20,8 @@ public class FightEvent implements Event {
     public String toDataString() {
         return getEventType().name();
     }
+
+    public static FightEvent fromString(String data) {
+        return new FightEvent();
+    }
 }

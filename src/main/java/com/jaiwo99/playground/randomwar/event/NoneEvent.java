@@ -18,4 +18,8 @@ public class NoneEvent implements Event {
     public String toDataString() {
         return getEventType().name();
     }
+
+    public static NoneEvent fromString(String data) {
+        return new NoneEvent();
+    }
 }

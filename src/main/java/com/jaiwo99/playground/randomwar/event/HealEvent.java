@@ -21,4 +21,8 @@ public class HealEvent implements Event {
     public String toDataString() {
         return getEventType().name();
     }
+
+    public static HealEvent fromString(String data) {
+        return new HealEvent();
+    }
 }

@@ -22,4 +22,8 @@ public class LoseFightEvent implements Event {
     public String toDataString() {
         return getEventType().name();
     }
+
+    public static LoseFightEvent fromString(String data) {
+        return new LoseFightEvent();
+    }
 }

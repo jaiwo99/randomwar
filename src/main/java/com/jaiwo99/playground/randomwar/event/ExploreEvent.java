@@ -30,4 +30,9 @@ public class ExploreEvent implements Event {
     public String toDataString() {
         return String.format("%s;%s;%s", getEventType(), position.x, position.y);
     }
+
+    public static ExploreEvent fromString(String data) {
+        final String[] dataArray = data.split(";");
+        return new ExploreEvent(new Position(Integer.valueOf(dataArray[1]), Integer.valueOf(dataArray[2])));
+    }
 }
