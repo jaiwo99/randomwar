@@ -1,8 +1,9 @@
 package com.jaiwo99.playground.randomwar.system;
 
 /**
+ * Indicates the event can be stored
+ *
  * @author liang shi
- * @since 24.09.15
  */
 public interface Storeable {
 

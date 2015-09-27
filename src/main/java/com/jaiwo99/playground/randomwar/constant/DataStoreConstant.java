@@ -2,7 +2,6 @@ package com.jaiwo99.playground.randomwar.constant;
 
 /**
  * @author liang shi
- * @since 25.09.15
  */
 public class DataStoreConstant implements Constant {
 

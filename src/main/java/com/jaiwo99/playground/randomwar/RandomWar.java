@@ -32,6 +32,12 @@ public class RandomWar {
         eventStore = EventStore.getInstance();
     }
 
+    /**
+     * Get the game stared by
+     * * Set data store path
+     * * load warriors from data store
+     * * show menu
+     */
     public void init(String storePath) throws IOException {
         warriorStore.storePath = storePath;
         eventStore.storePath = storePath;

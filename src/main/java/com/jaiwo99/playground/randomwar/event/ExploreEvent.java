@@ -7,7 +7,6 @@ import static com.jaiwo99.playground.randomwar.constant.DataStoreConstant.DATA_S
 
 /**
  * @author liang shi
- * @since 24.09.15
  */
 public class ExploreEvent implements Event {
 

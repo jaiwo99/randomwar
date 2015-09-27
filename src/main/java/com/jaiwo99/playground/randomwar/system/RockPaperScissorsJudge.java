@@ -3,8 +3,9 @@ package com.jaiwo99.playground.randomwar.system;
 import static java.util.concurrent.ThreadLocalRandom.current;
 
 /**
+ * One of a silly game ;)
+ *
  * @author liang shi
- * @since 25.09.15
  */
 public class RockPaperScissorsJudge {
 

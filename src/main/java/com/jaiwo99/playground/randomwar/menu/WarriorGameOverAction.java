@@ -6,7 +6,6 @@ import com.jaiwo99.playground.randomwar.repository.EventStore;
 
 /**
  * @author liang shi
- * @since 25.09.15
  */
 public class WarriorGameOverAction implements MenuAction {
 

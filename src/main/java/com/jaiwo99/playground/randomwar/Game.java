@@ -6,8 +6,9 @@ import java.io.File;
 import java.io.IOException;
 
 /**
+ * Entry point
+ *
  * @author liang shi
- * @since 24.09.15
  */
 public class Game {
 
@@ -29,6 +30,9 @@ public class Game {
         }
     }
 
+    /**
+     * Build the skeleton of data store.
+     */
     static void buildDataStore(String rootPath) throws IOException {
         File root = new File(rootPath);
         if (root.exists() && root.isDirectory()) {

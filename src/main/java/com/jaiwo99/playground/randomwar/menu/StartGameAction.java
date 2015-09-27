@@ -14,6 +14,10 @@ public class StartGameAction implements MenuAction {
         this.eventStore = eventStore;
     }
 
+    /**
+     * Important part of loading a warrior, all the events of the character
+     * will be replayed so that the status of the character can be rebuild.
+     */
     @Override
     public void execute() {
         eventStore.loadEvents().stream().forEachOrdered(event ->

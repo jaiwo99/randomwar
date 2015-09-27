@@ -7,6 +7,11 @@ import static com.jaiwo99.playground.randomwar.event.EventType.*;
 import static java.util.concurrent.ThreadLocalRandom.current;
 
 /**
+ * Defines all the following UI depends on given MenuActionType.
+ *
+ * @see MenuActionType
+ * @see MenuAction
+ *
  * @author jaiwo99
  */
 public class MenuEndpointFactory {

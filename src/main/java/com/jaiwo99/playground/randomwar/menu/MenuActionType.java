@@ -1,6 +1,8 @@
 package com.jaiwo99.playground.randomwar.menu;
 
 /**
+ * Defines all the possible user action types
+ *
  * @author jaiwo99
  */
 public enum MenuActionType {

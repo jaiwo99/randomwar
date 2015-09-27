@@ -26,6 +26,9 @@ public class WarriorExploreMenuAction implements MenuAction {
         eventStore.saveEvent(exploreEvent);
     }
 
+    /**
+     * Generate a coordination on the map.
+     */
     private Position generatePosition() {
         return new Position(current().nextInt(MapConstant.MAP_INIT_AXIS_X), current().nextInt(MapConstant.MAP_INIT_AXIS_Y));
     }

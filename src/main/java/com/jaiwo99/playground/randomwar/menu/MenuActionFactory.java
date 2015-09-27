@@ -4,6 +4,8 @@ import com.jaiwo99.playground.randomwar.repository.EventStore;
 import com.jaiwo99.playground.randomwar.repository.WarriorStore;
 
 /**
+ * This class contains all the necessary routing information of execution of a user action
+ *
  * @author jaiwo99
  */
 public class MenuActionFactory {
